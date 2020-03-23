@@ -1,0 +1,16 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="235dp"
+    android:height="157dp"
+    android:viewportWidth="235"
+    android:viewportHeight="157"
+    >
+    <group android:name="group_1">
+        <path
+            android:name="path_2"
+            android:pathData="M235 15C235 6.71573 228.284 0 220 0H100C91.7157 0 85 6.71573 85 15V73C85 81.2843 78.2843 88 70 88H15C6.71573 88 0 94.7157 0 103V142C0 150.284 6.71573 157 15 157H85H220C228.284 157 235 150.284 235 142V15Z"
+            android:strokeWidth="3"
+            android:strokeColor="#FFFFFF"/>
+    </group>
+</vector>

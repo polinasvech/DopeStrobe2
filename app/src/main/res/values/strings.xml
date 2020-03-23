@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DopeStrobe</string>
+    <string name="color_text">select a color</string>
+    <string name="start_text">start</string>
+    <string name="led_text">led</string>
+    <string name="dope_text">DOPE</string>
+    <string name="strobe_text">STROBE</string>
+</resources>

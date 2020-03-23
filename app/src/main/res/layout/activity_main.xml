@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/home"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/color_border"
+            android:layout_width="320dp"
+            android:layout_height="157dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/color_shape" />
+
+        <TextView
+            android:id="@+id/color_text"
+            android:layout_width="170dp"
+            android:layout_height="69dp"
+            android:layout_alignTop="@+id/color_border"
+            android:layout_alignEnd="@+id/color_border"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="end"
+            android:minLines="2"
+            android:text="@string/color_text"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/start_border"
+            android:layout_width="235dp"
+            android:layout_height="157dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="109dp"
+            android:layout_marginEnd="71dp"
+            android:background="@drawable/start_shape" />
+
+        <TextView
+            android:id="@+id/start_text"
+            android:layout_width="170dp"
+            android:layout_height="69dp"
+            android:layout_alignTop="@+id/start_border"
+            android:layout_alignEnd="@+id/start_border"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="36dp"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="end"
+            android:minLines="2"
+            android:text="@string/start_text"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/welcome_border"
+            android:layout_width="320dp"
+            android:layout_height="334dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="286dp"
+            android:background="@drawable/welcome_shape" />
+
+        <View
+            android:id="@+id/led_freq_border"
+            android:layout_width="65dp"
+            android:layout_height="264dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="187dp"
+            android:background="@drawable/led_freq_shape" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="157dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="71dp"
+            android:layout_marginBottom="111dp"
+            android:background="@drawable/led_shape"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/led_text"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <SeekBar
+            android:id="@+id/led_freq_seekbar"
+            android:layout_width="1dp"
+            android:layout_height="172dp"
+            android:layout_alignEnd="@+id/led_freq_border"
+            android:layout_alignBottom="@+id/led_freq_border"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="45dp"
+            android:background="@android:color/white"
+            android:max="1000" />
+
+        <TextView
+            android:id="@+id/led_freq_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/led_freq_border"
+            android:layout_alignBottom="@+id/led_freq_border"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:text="..."
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/led_freq_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/led_freq_border"
+            android:layout_alignTop="@+id/led_freq_border"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:maxLines="1"
+            android:text="100%"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignStart="@+id/color_border"
+            android:layout_alignTop="@+id/color_border"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="14dp"
+            android:background="@android:color/background_dark"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="45sp"
+            android:fontFamily="@font/roboto_thin"/>
+
+        <TextView
+            android:id="@+id/textDope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/welcome_border"
+            android:layout_alignEnd="@+id/welcome_border"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/dope_text"
+            android:textAllCaps="true"
+            android:textColor="#fea1be"
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/textStrobe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/welcome_border"
+            android:layout_alignBottom="@+id/welcome_border"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/strobe_text"
+            android:textAllCaps="true"
+            android:textColor="#b6ff02"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
