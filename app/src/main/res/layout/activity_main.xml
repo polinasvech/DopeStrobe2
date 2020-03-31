@@ -19,10 +19,10 @@
             android:id="@+id/color_border"
             android:layout_width="320dp"
             android:layout_height="157dp"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="45dp"
             android:background="@drawable/color_shape" />
 
         <TextView
@@ -47,8 +47,8 @@
             android:layout_height="157dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="109dp"
-            android:layout_marginEnd="71dp"
+            android:layout_marginTop="157dp"
+            android:layout_marginEnd="45dp"
             android:background="@drawable/start_shape" />
 
         <TextView
@@ -72,9 +72,11 @@
             android:layout_width="320dp"
             android:layout_height="334dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="286dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="70dp"
             android:background="@drawable/welcome_shape" />
 
         <View
@@ -83,8 +85,8 @@
             android:layout_height="264dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="187dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="233dp"
             android:background="@drawable/led_freq_shape" />
 
         <Button
@@ -93,8 +95,8 @@
             android:layout_height="157dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="71dp"
-            android:layout_marginBottom="111dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="70dp"
             android:background="@drawable/led_shape"
             android:fontFamily="@font/roboto_thin"
             android:text="@string/led_text"
@@ -121,7 +123,7 @@
             android:layout_marginStart="17dp"
             android:layout_marginBottom="10dp"
             android:maxLines="1"
-            android:text="..."
+            android:text="@string/freq_text"
             android:textColor="@android:color/white"
             android:textSize="40sp" />
 
@@ -139,18 +141,18 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnColor"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_alignStart="@+id/color_border"
             android:layout_alignTop="@+id/color_border"
             android:layout_marginStart="9dp"
             android:layout_marginTop="14dp"
-            android:background="@android:color/background_dark"
-            android:text="+"
+            android:background="@drawable/home"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/plus"
             android:textColor="@android:color/white"
-            android:textSize="45sp"
-            android:fontFamily="@font/roboto_thin"/>
+            android:textSize="45sp" />
 
         <TextView
             android:id="@+id/textDope"

@@ -5,4 +5,7 @@
     <string name="led_text">led</string>
     <string name="dope_text">DOPE</string>
     <string name="strobe_text">STROBE</string>
+    <string name="freq_text">...</string>
+    <string name="plus">+</string>
+    <string name="back">&lt;-</string>
 </resources>

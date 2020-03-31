@@ -17,12 +17,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ScreenActivity"
-            android:label="@string/screen_text">
+        <activity android:name=".ColorActivity"
+            android:label="@string/color_text">
         </activity>
 
         <activity android:name=".FlashLightActivity"
-            android:label="@string/flashlight_text">
+            android:label="@string/led_text">
         </activity>
 
         <meta-data

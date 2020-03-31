@@ -5,4 +5,13 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorFlashLightBtn">#fea1be</color>
     <color name="colorScreenBtn">#b6ff02</color>
+    <color name="red">#FE0000</color>
+    <color name="orange">#FF8601</color>
+    <color name="yellow">#FDFE02</color>
+    <color name="green">#2FFB06</color>
+    <color name="lightblue">#07FFFF</color>
+    <color name="blue">#1502FE</color>
+    <color name="purple">#EA04FD</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>
