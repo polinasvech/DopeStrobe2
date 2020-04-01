@@ -49,7 +49,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="157dp"
             android:layout_marginEnd="45dp"
-            android:background="@drawable/start_shape" />
+            android:background="@drawable/start_shape"
+            android:onClick="onStart" />
 
         <TextView
             android:id="@+id/start_text"
@@ -150,6 +151,7 @@
             android:layout_marginTop="14dp"
             android:background="@drawable/home"
             android:fontFamily="@font/roboto_thin"
+            android:onClick="onColor"
             android:text="@string/plus"
             android:textColor="@android:color/white"
             android:textSize="45sp" />

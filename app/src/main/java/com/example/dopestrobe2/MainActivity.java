@@ -1,32 +1,46 @@
 package com.example.dopestrobe2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
+import android.provider.Settings;
 import android.view.View;
 import android.content.Intent;
 import android.widget.Button;
 
-public class MainActivity extends Activity implements View.OnClickListener
+import androidx.annotation.RequiresApi;
+
+public class MainActivity extends Activity
 {
     private static final String TAG = "MainActivity";
 
+    int back_id = 0;
     Button btnColor;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnColor = (Button) findViewById(R.id.btnColor);
-        btnColor.setOnClickListener((View.OnClickListener) this);
+        Context context = getApplicationContext();
+        boolean settingsCanWrite = Settings.System.canWrite(context);
+        if(!settingsCanWrite) {
+            // If do not have write settings permission then open the Can modify system settings panel.
+            Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+            startActivity(intent);
+        }
     }
 
-    public void onClick(View v) {
+    public void onColor(View v) {
         Intent intent = new Intent(this, ColorActivity.class);
+        startActivityForResult(intent, 1);
+    }
+
+    public void onStart(View v) {
+        Intent intent = new Intent(this, ScreenActivity.class);
+        intent.putExtra("back", back_id);
         startActivityForResult(intent, 1);
     }
 
@@ -34,39 +48,17 @@ public class MainActivity extends Activity implements View.OnClickListener
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         btnColor = (Button) findViewById(R.id.btnColor);
         if (data == null) {return;}
-        int back = data.getIntExtra("back", 0);
-        if (back == 0) {
-            btnColor.setBackgroundResource(R.drawable.home);
-            btnColor.setTextColor(R.color.white);
-        }
-        else if (back == 1) {
-            btnColor.setBackgroundResource(R.drawable.red);
-            btnColor.setTextColor(R.color.red);
-        }
-        else if (back == 2) {
-            btnColor.setBackgroundResource(R.drawable.orange);
-            btnColor.setTextColor(R.color.orange);
-        }
-        else if (back == 3) {
-            btnColor.setBackgroundResource(R.drawable.yellow);
-            btnColor.setTextColor(R.color.yellow);
-        }
-        else if (back == 4) {
-            btnColor.setBackgroundResource(R.drawable.green);
-            btnColor.setTextColor(R.color.green);
-        }
-        else if (back == 5) {
-            btnColor.setBackgroundResource(R.drawable.lightblue);
-            btnColor.setTextColor(R.color.lightblue);
-        }
-        else if (back == 6) {
-            btnColor.setBackgroundResource(R.drawable.blue);
-            btnColor.setTextColor(R.color.blue);
-        }
-        else if (back == 7) {
-            btnColor.setBackgroundResource(R.drawable.purple);
-            btnColor.setTextColor(R.color.purple);
-        }
+        back_id = data.getIntExtra("back", 0);
+        changeColorButton(back_id);
+    }
+
+    public void changeColorButton (int back_id) {
+        int[] backgrounds = {R.drawable.home, R.drawable.red, R.drawable.orange,
+                R.drawable.yellow, R.drawable.green, R.drawable.lightblue,
+                R.drawable.blue, R.drawable.purple};
+        btnColor.setBackgroundResource(backgrounds[back_id]);
+        if (back_id == 0) { btnColor.setText(R.string.plus); }
+        else { btnColor.setText(null); }
     }
 
 //    public void onFlashLightClick(View view) {
