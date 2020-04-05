@@ -12,7 +12,7 @@
     <string name="brightness">Brightness</string>
     <string name="frequency">Frequency</string>
     <string name="squares">&#9632; &#9632; &#9632;</string>
-    <string name="back_color">&lt;back</string>
+    <string name="back_screen">&lt;back</string>
     
     <string name="ms">%d ms </string>
     <string name="percents">%d %%</string>

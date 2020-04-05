@@ -7,6 +7,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -15,14 +16,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
 
-public class ScreenActivity extends AppCompatActivity {
-
+public class ScreenActivity extends AppCompatActivity
+{
+    ConstraintLayout mConstraintLayout;
     TextView txtFreq;
     SeekBar sbScreenFreq;
     TextView txtBright;
     SeekBar sbScreenBright;
-    ConstraintLayout mConstraintLayout;
-    Thread t;
+    boolean isStrobe = false;
+    TextView txtBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,12 @@ public class ScreenActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final int back_id = intent.getIntExtra("back", 0);
         changeBackgroundColor(back_id);
+        if(back_id != 0) {
+            txtBack = findViewById(R.id.txtBack);
+            txtBack.setTextColor(getResources().getColor(R.color.black));
+            txtBright.setText(getString(R.string.percents, Math.round(getBrightness()/2.55)));
+            txtFreq.setText(getString(R.string.ms, sbScreenFreq.getProgress()));
+        }
 
         sbScreenFreq.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -86,8 +94,9 @@ public class ScreenActivity extends AppCompatActivity {
 
     private void setBrightness(int brightness) {
         ContentResolver contentResolver = getApplicationContext().getContentResolver();
-        Settings.System.putInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
+        Settings.System.putInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS, (int) Math.round(brightness*2.25));
     }
+
     private int getBrightness() {
         int brightness = 100;
         try {
@@ -110,5 +119,10 @@ public class ScreenActivity extends AppCompatActivity {
         colorFade.setRepeatCount(ValueAnimator.INFINITE);
         colorFade.setRepeatMode(ValueAnimator.REVERSE);
         colorFade.start();
+    }
+
+    public void onBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

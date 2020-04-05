@@ -23,6 +23,8 @@ public class sbLedFragment extends Fragment {
         sbFreq = view.findViewById(R.id.sbFreq);
         txtFreq = view.findViewById(R.id.txtFreq);
 
+        txtFreq.setText(getString(R.string.ms, sbFreq.getProgress()));
+
         sbFreq.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

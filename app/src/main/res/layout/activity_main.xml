@@ -21,7 +21,7 @@
             android:layout_height="157dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="45dp"
             android:background="@drawable/color_shape" />
 
@@ -47,8 +47,8 @@
             android:layout_height="157dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="157dp"
-            android:layout_marginEnd="45dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginEnd="50dp"
             android:background="@drawable/start_shape"
             android:onClick="onStart" />
 
@@ -71,23 +71,23 @@
         <View
             android:id="@+id/welcome_border"
             android:layout_width="320dp"
-            android:layout_height="334dp"
+            android:layout_height="300dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="45dp"
             android:layout_marginEnd="45dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/welcome_shape" />
 
         <View
             android:id="@+id/led_freq_border"
             android:layout_width="65dp"
-            android:layout_height="264dp"
+            android:layout_height="230dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="233dp"
+            android:layout_marginTop="193dp"
             android:background="@drawable/led_freq_shape" />
 
         <Button
@@ -96,8 +96,8 @@
             android:layout_height="157dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="45dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="27dp"
             android:background="@drawable/led_shape"
             android:fontFamily="@font/roboto_thin"
             android:onClick="onLed"
