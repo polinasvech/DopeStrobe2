@@ -1,5 +1,6 @@
 package com.example.dopestrobe2;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,7 @@ public class sbLedFragment extends Fragment {
     // The onCreateView method is called when Fragment should create its View object hierarchy,
     // either dynamically or via XML layout inflation.
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, final ViewGroup parent, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sb_led, parent, false);
 
         sbFreq = view.findViewById(R.id.sbFreq);
@@ -25,7 +26,8 @@ public class sbLedFragment extends Fragment {
         sbFreq.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                txtFreq.setText(String.valueOf(progress));
+                String freq =  getString(R.string.ms, progress);
+                txtFreq.setText(freq);
 //                if(progress > 0) {
 //                    try {
 //                        startStrobe(progress, back_id);

@@ -14,7 +14,9 @@
     <string name="squares">&#9632; &#9632; &#9632;</string>
     <string name="back_color">&lt;back</string>
     
-    <string name="track_b"> %1$d % </string>
+    <string name="ms">%d ms </string>
+    <string name="percents">%d %%</string>
+
 
     <string name="title_activity_screen">ScreenActivity</string>
     <string name="dummy_button">Dummy Button</string>

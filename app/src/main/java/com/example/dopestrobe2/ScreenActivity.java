@@ -42,7 +42,8 @@ public class ScreenActivity extends AppCompatActivity {
         sbScreenFreq.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                txtFreq.setText(String.valueOf(progress));
+                String freq =  getString(R.string.ms, progress);
+                txtFreq.setText(freq);
                 if(progress > 0) {
                     try {
                         startStrobe(progress, back_id);
@@ -62,7 +63,8 @@ public class ScreenActivity extends AppCompatActivity {
         sbScreenBright.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                txtBright.setText(String.valueOf(progress));
+                String brightness =  getString(R.string.percents, progress);
+                txtBright.setText(brightness);
                 setBrightness(progress);
             }
 
