@@ -91,7 +91,7 @@
             android:background="@drawable/led_freq_shape" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnLed"
             android:layout_width="150dp"
             android:layout_height="157dp"
             android:layout_alignParentEnd="true"
@@ -100,6 +100,7 @@
             android:layout_marginBottom="70dp"
             android:background="@drawable/led_shape"
             android:fontFamily="@font/roboto_thin"
+            android:onClick="onLed"
             android:text="@string/led_text"
             android:textColor="@android:color/white"
             android:textSize="25sp" />

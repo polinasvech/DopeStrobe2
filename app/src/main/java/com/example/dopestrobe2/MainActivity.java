@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity
 
     int back_id = 0;
     Button btnColor;
+    Button btnLed;
+    boolean isLed = false;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,20 @@ public class MainActivity extends AppCompatActivity
         btnColor.setBackgroundResource(backgrounds[back_id]);
         if (back_id == 0) { btnColor.setText(R.string.plus); }
         else { btnColor.setText(null); }
+    }
+
+    public void onLed(View view) {
+        btnLed = (Button) findViewById(R.id.btnLed);
+        if(!isLed) {
+            btnLed.setBackgroundColor(getResources().getColor(R.color.white));
+            btnLed.setTextColor(getResources().getColor(R.color.black));
+            isLed = true;
+        }
+        else {
+            btnLed.setBackground(getResources().getDrawable(R.drawable.led_shape));
+            btnLed.setTextColor(getResources().getColor(R.color.white));
+            isLed = false;
+        }
     }
 
 //    public void onFlashLightClick(View view) {
