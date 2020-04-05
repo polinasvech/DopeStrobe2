@@ -11,8 +11,15 @@
     <string name="back">&lt;-</string>
     <string name="brightness">Brightness</string>
     <string name="frequency">Frequency</string>
+    <string name="squares">&#9632; &#9632; &#9632;</string>
+    <string name="back_color">&lt;back</string>
+    
+    <string name="track_b"> %1$d % </string>
 
     <string name="title_activity_screen">ScreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

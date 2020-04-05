@@ -11,8 +11,9 @@ import android.content.Intent;
 import android.widget.Button;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
 {
     private static final String TAG = "MainActivity";
 
@@ -46,8 +47,11 @@ public class MainActivity extends Activity
 
     @SuppressLint("ResourceAsColor")
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         btnColor = (Button) findViewById(R.id.btnColor);
-        if (data == null) {return;}
+        if (data == null) {
+            return;
+        }
         back_id = data.getIntExtra("back", 0);
         changeColorButton(back_id);
     }
